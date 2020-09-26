@@ -16,9 +16,19 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    if @article.save
+      redirect_to @article, notice: '作成できました'
+    else
+      render :new, alert: '作成できませんでした'
+    end
   end
 
   def update
+    if @article.update(article_params)
+      redirect_to @article, notice: '更新できました'
+    else
+      render :edit, alert: '更新できませんでした'
+    end
   end
 
   def destroy
@@ -37,3 +47,4 @@ class ArticlesController < ApplicationController
   def article_params
   end
 end
+
