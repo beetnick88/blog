@@ -1,2 +1,12 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="container">
+  <div class="col-md-12 space-m article-block">
+  <%= image_tag "top-image1.jpg", class: 'article-image image-block-top' %>
+  <h1><%= @article.title %></h1>
+    <div class="image-block-bottom">
+      <p class="title"><%= @article.title %></p>
+      <p class="text-right">
+          <%= @article.created_at.strftime("%Y年%m月%d日") %>
+      </p>
+    </div >
+  </div>
+</div>
