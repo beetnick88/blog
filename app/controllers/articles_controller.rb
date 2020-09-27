@@ -37,6 +37,7 @@ class ArticlesController < ApplicationController
     else
       redirect_to root_path, alert: '削除できませんでした'
   end
+end
 
 
   private
