@@ -909,3 +909,315 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 8818)
 
 
+Started GET "/" for ::1 at 2020-09-28 01:37:42 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 43.0ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.6ms | Allocations: 10132)
+
+
+Started GET "/articles" for ::1 at 2020-09-28 23:52:50 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1897)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 49.1ms | ActiveRecord: 0.8ms | Allocations: 11304)
+
+
+Started GET "/articles/new" for ::1 at 2020-09-28 23:52:52 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1148)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1841)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+  <div class="col-md-12 space-m article-block">
+    <h1 class="text-center">ブログの新規作成</h1>
+    <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+    <div class="image-block-bottom">
+      <%= form_for @article do |f| %>
+        <div class="form-group image-block-top">
+          <%= f.label :title 'タイトル'%>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+        <%= f.label :body '本文'%>
+        <%= f.text_field :body, class: 'form-control' %>
+        </div>
+        <%= f.submit '新規作成', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="container">
+2:      <div class="col-md-12 space-m article-block">
+3:        <h1 class="text-center">ブログの新規作成</h1>
+4:        <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+5:        <div class="image-block-bottom">
+6:          <%= form_for @article do |f| %>
+7:            <div class="form-group image-block-top">
+8:              <%= f.label :title 'タイトル'%>
+9:              <%= f.text_field :title, class: 'form-control' %>
+10:            </div>
+11:            <div class="form-group">
+12:            <%= f.label :body '本文'%>
+13:            <%= f.text_field :body, class: 'form-control' %>
+14:            </div>
+15:            <%= f.submit '新規作成', class: 'btn btn-success' %>
+16:          <% end %>
+17:        </div>
+18:      </div>
+19:    </div>
+  
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/articles/new" for ::1 at 2020-09-28 23:53:20 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1143)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2436)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+  <div class="col-md-12 space-m article-block">
+    <h1 class="text-center">ブログの新規作成</h1>
+    <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+    <div class="image-block-bottom">
+      <%= form_for @article do |f| %>
+        <div class="form-group image-block-top">
+          <%= f.label :title 'タイトル' %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+        <%= f.label :body '本文'%>
+        <%= f.text_field :body, class: 'form-control' %>
+        </div>
+        <%= f.submit '新規作成', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="container">
+2:      <div class="col-md-12 space-m article-block">
+3:        <h1 class="text-center">ブログの新規作成</h1>
+4:        <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+5:        <div class="image-block-bottom">
+6:          <%= form_for @article do |f| %>
+7:            <div class="form-group image-block-top">
+8:              <%= f.label :title 'タイトル' %>
+9:              <%= f.text_field :title, class: 'form-control' %>
+10:            </div>
+11:            <div class="form-group">
+12:            <%= f.label :body '本文'%>
+13:            <%= f.text_field :body, class: 'form-control' %>
+14:            </div>
+15:            <%= f.submit '新規作成', class: 'btn btn-success' %>
+16:          <% end %>
+17:        </div>
+18:      </div>
+19:    </div>
+  
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/articles/new" for ::1 at 2020-09-28 23:53:43 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1143)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2436)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+  <div class="col-md-12 space-m article-block">
+    <h1 class="text-center">ブログの新規作成</h1>
+    <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+    <div class="image-block-bottom">
+      <%= form_for @article do |f| %>
+        <div class="form-group image-block-top">
+          <%= f.label :title 'タイトル' %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+        <%= f.label :body '本文' %>
+        <%= f.text_field :body, class: 'form-control' %>
+        </div>
+        <%= f.submit '新規作成', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="container">
+2:      <div class="col-md-12 space-m article-block">
+3:        <h1 class="text-center">ブログの新規作成</h1>
+4:        <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+5:        <div class="image-block-bottom">
+6:          <%= form_for @article do |f| %>
+7:            <div class="form-group image-block-top">
+8:              <%= f.label :title 'タイトル' %>
+9:              <%= f.text_field :title, class: 'form-control' %>
+10:            </div>
+11:            <div class="form-group">
+12:            <%= f.label :body '本文' %>
+13:            <%= f.text_field :body, class: 'form-control' %>
+14:            </div>
+15:            <%= f.submit '新規作成', class: 'btn btn-success' %>
+16:          <% end %>
+17:        </div>
+18:      </div>
+19:    </div>
+  
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/articles/new" for ::1 at 2020-09-28 23:55:23 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1143)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2436)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+  <div class="col-md-12 space-m article-block">
+    <h1 class="text-center">ブログの新規作成</h1>
+    <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+    <div class="image-block-bottom">
+      <%= form_for @article do |f| %>
+        <div class="form-group image-block-top">
+          <%= f.label :title, 'タイトル' %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+        <%= f.label :body '本文' %>
+        <%= f.text_field :body, class: 'form-control' %>
+        </div>
+        <%= f.submit '新規作成', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="container">
+2:      <div class="col-md-12 space-m article-block">
+3:        <h1 class="text-center">ブログの新規作成</h1>
+4:        <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
+5:        <div class="image-block-bottom">
+6:          <%= form_for @article do |f| %>
+7:            <div class="form-group image-block-top">
+8:              <%= f.label :title, 'タイトル' %>
+9:              <%= f.text_field :title, class: 'form-control' %>
+10:            </div>
+11:            <div class="form-group">
+12:            <%= f.label :body '本文' %>
+13:            <%= f.text_field :body, class: 'form-control' %>
+14:            </div>
+15:            <%= f.submit '新規作成', class: 'btn btn-success' %>
+16:          <% end %>
+17:        </div>
+18:      </div>
+19:    </div>
+  
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/articles/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/articles/new" for ::1 at 2020-09-28 23:55:32 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 3588)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 12886)
+
+
+Started POST "/articles" for ::1 at 2020-09-28 23:56:27 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"zlTIuXYHREsgbXxuJBCnKM7LyMsr03+uF3CaghYHPPneQTEMcpfX1QbglzebSGS3q+gWAsFM8XSfxGP6n+lLng==", "article"=>{"title"=>"yeah", "body"=>"イッヌ"}, "commit"=>"新規作成"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+  [1m[36mArticle Create (2.2ms)[0m  [1m[32mINSERT INTO "articles" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-09-28 14:56:27.148784"], ["updated_at", "2020-09-28 14:56:27.148784"]]
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 14ms (ActiveRecord: 2.8ms | Allocations: 2854)
+
+
+Started GET "/articles/3" for ::1 at 2020-09-28 23:56:27 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 9936)
+
+
+Started GET "/articles" for ::1 at 2020-09-28 23:56:42 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 10835)
+
+
+Started GET "/articles" for ::1 at 2020-09-28 23:56:59 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1940)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 10446)
+
+
