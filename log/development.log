@@ -1232,3 +1232,58 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 48ms (Views: 37.9ms | ActiveRecord: 0.6ms | Allocations: 15294)
 
 
+Started GET "/articles/new" for ::1 at 2020-10-01 00:01:59 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 15.3ms | Allocations: 2758)
+  Rendered articles/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3670)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 12988)
+
+
+Started POST "/articles" for ::1 at 2020-10-01 00:02:11 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"C79IN6vwmxJOZBCfbiXaE6dIpsJCmbCtCk8sZie3FDe49v4Sc4XGwUSQxRp/2RrXd9RI64gL91FwGTP38IF6mg==", "article"=>{"title"=>"成功", "body"=>"できたはず"}, "commit"=>"新規作成"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+  [1m[36mArticle Create (3.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "成功"], ["body", "できたはず"], ["created_at", "2020-09-30 15:02:11.858344"], ["updated_at", "2020-09-30 15:02:11.858344"]]
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 11ms (ActiveRecord: 4.8ms | Allocations: 2836)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-01 00:02:11 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 752)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.6ms | Allocations: 10054)
+
+
+Started GET "/articles" for ::1 at 2020-10-01 00:02:20 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2530)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 11192)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-01 00:02:22 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 602)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.1ms | Allocations: 9637)
+
+

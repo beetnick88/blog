@@ -3,7 +3,7 @@
     <h1 class="text-center">ブログの新規作成</h1>
     <%= image_tag 'top-image1.jpg', class: 'article-image image-block-top' %>
     <div class="image-block-bottom">
-      <%= render 'form' %>
+      <%= render 'form' ,article: @article %>
       
     </div>
   </div>
