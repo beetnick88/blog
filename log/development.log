@@ -1385,3 +1385,487 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 9361)
 
 
+Started GET "/articles/4" for ::1 at 2020-10-03 00:00:17 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 824)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.1ms | Allocations: 10776)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-03 00:03:16 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.1ms | Allocations: 10791)
+
+
+Started GET "/articles" for ::1 at 2020-10-03 00:03:34 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2514)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 11162)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-03 00:03:40 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 9689)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:03:41 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 9363)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:06:03 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 344.0ms | Allocations: 160126)
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 0.1ms | Allocations: 161974)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fcbcc12fa30>:0x00007fcbcc12df78>
+Did you mean?  @article):
+    1: <%= form_for article do |f| %>  
+    2:         <div class="form-group image-block-top">
+    3:           <%= f.label :title, 'タイトル' %>
+    4:           <%= f.text_field :title, class: 'form-control' %>
+  
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:06:39 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 267.9ms | Allocations: 160763)
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.1ms | Allocations: 162615)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `＠article' for #<#<Class:0x00007fcbcfd99a20>:0x00007fcbcfda3048>
+Did you mean?  @article):
+    1: <%= form_for ＠article do |f| %>  
+    2:         <div class="form-group image-block-top">
+    3:           <%= f.label :title, 'タイトル' %>
+    4:           <%= f.text_field :title, class: 'form-control' %>
+  
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:09:40 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 234.0ms | Allocations: 160069)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.1ms | Allocations: 161921)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fcbcc0a42c8>:0x00007fcbcc0ae868>
+Did you mean?  @article):
+    1: <%= form_for article do |f| %>  
+    2:         <div class="form-group image-block-top">
+    3:           <%= f.label :title, 'タイトル' %>
+    4:           <%= f.text_field :title, class: 'form-control' %>
+  
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:10:04 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 200.7ms | Allocations: 160066)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.1ms | Allocations: 161921)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fcbc8181190>:0x00007fcbc818a100>
+Did you mean?  @article):
+    1: <%= form_for article do |f| %>  
+    2:   <div class="form-group image-block-top">
+    3:     <%= f.label :title, 'タイトル' %>
+    4:     <%= f.text_field :title, class: 'form-control' %>
+  
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:12:06 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1069)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2919)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    1: <%= form_for do |f| %>  
+    2:   <div class="form-group image-block-top">
+    3:     <%= f.label :title, 'タイトル' %>
+    4:     <%= f.text_field :title, class: 'form-control' %>
+  
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:13:40 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.5ms | Allocations: 640)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.1ms | Allocations: 11002)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:14:02 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.6ms | Allocations: 1250)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1557)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 3403)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for article do |f| %>  
+  <div class="form-group image-block-top">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, '本文' %>
+    <%= f.text_area :body, rows: 10, class: 'form-control' %>
+  </div>
+  <%= f.submit , class: 'btn btn-success' %>
+<% end %>
+):
+1:    <%= form_for article do |f| %>  
+2:      <div class="form-group image-block-top">
+3:        <%= f.label :title, 'タイトル' %>
+4:        <%= f.text_field :title, class: 'form-control' %>
+5:      </div>
+6:      <div class="form-group">
+7:        <%= f.label :body, '本文' %>
+8:        <%= f.text_area :body, rows: 10, class: 'form-control' %>
+9:      </div>
+10:      <%= f.submit , class: 'btn btn-success' %>
+11:    <% end %>
+  
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:14:10 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.6ms | Allocations: 1249)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1551)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3394)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for article do |f| %>  
+  <div class="form-group image-block-top">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, '本文' %>
+    <%= f.text_area :body, rows: 10, class: 'form-control' %>
+  </div>
+  <%= f.submit, class: 'btn btn-success' %>
+<% end %>
+):
+1:    <%= form_for article do |f| %>  
+2:      <div class="form-group image-block-top">
+3:        <%= f.label :title, 'タイトル' %>
+4:        <%= f.text_field :title, class: 'form-control' %>
+5:      </div>
+6:      <div class="form-group">
+7:        <%= f.label :body, '本文' %>
+8:        <%= f.text_area :body, rows: 10, class: 'form-control' %>
+9:      </div>
+10:      <%= f.submit, class: 'btn btn-success' %>
+11:    <% end %>
+  
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:15:40 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | Allocations: 1249)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1551)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 3394)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for article do |f| %>  
+  <div class="form-group image-block-top">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, '本文' %>
+    <%= f.text_area :body, rows: 10, class: 'form-control' %>
+  </div>
+  <%= f.submit , class: 'btn btn-success' %>
+<% end %>
+):
+1:    <%= form_for article do |f| %>  
+2:      <div class="form-group image-block-top">
+3:        <%= f.label :title, 'タイトル' %>
+4:        <%= f.text_field :title, class: 'form-control' %>
+5:      </div>
+6:      <div class="form-group">
+7:        <%= f.label :body, '本文' %>
+8:        <%= f.text_area :body, rows: 10, class: 'form-control' %>
+9:      </div>
+10:      <%= f.submit , class: 'btn btn-success' %>
+11:    <% end %>
+  
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/edit.html.erb:1
+Started GET "/articles" for ::1 at 2020-10-03 00:15:46 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2514)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms | Allocations: 11334)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-03 00:15:48 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 10004)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:15:50 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | Allocations: 1236)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1310)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2425)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for article do |f| %>  
+  <div class="form-group image-block-top">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, '本文' %>
+    <%= f.text_area :body, rows: 10, class: 'form-control' %>
+  </div>
+  <%= f.submit , class: 'btn btn-success' %>
+<% end %>
+):
+1:    <%= form_for article do |f| %>  
+2:      <div class="form-group image-block-top">
+3:        <%= f.label :title, 'タイトル' %>
+4:        <%= f.text_field :title, class: 'form-control' %>
+5:      </div>
+6:      <div class="form-group">
+7:        <%= f.label :body, '本文' %>
+8:        <%= f.text_area :body, rows: 10, class: 'form-control' %>
+9:      </div>
+10:      <%= f.submit , class: 'btn btn-success' %>
+11:    <% end %>
+  
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/_form.html.erb:10: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/edit.html.erb:1
+Started GET "/articles/4" for ::1 at 2020-10-03 00:15:53 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 9691)
+
+
+Started GET "/articles" for ::1 at 2020-10-03 00:15:53 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2266)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 10765)
+
+
+Started GET "/articles" for ::1 at 2020-10-03 00:35:33 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1406)
+
+
+  
+ArgumentError (Unknown validator: 'PresenseValidator'):
+  
+app/models/article.rb:4:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:4:in `index'
+Started GET "/articles" for ::1 at 2020-10-03 00:36:33 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 5505)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.5ms | Allocations: 14950)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-03 00:36:36 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 836)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 10126)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:36:38 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 19.2ms | Allocations: 3737)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 20.5ms | Allocations: 4036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.1ms | Allocations: 13323)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:37:27 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.2ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1645)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.1ms | Allocations: 11594)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-03 00:37:28 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 10006)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-03 00:37:30 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.9ms | Allocations: 552)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms | Allocations: 10219)
+
+
+Started PATCH "/articles/4" for ::1 at 2020-10-03 00:37:31 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"iEXFpscbzJLd7BItrNqH3e6cKEfbGtyrf6rEALRdSwClH97gn5UOnNY0/2/3ddP33cWH5RV19tlAiEGQcKUqqg==", "article"=>{"title"=>"成功", "body"=>"できたはず"}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1342)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-03 00:37:31 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 652)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 9685)
+
+
+Started GET "/articles" for ::1 at 2020-10-03 00:37:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2519)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 11166)
+
+
