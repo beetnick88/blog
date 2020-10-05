@@ -2287,3 +2287,396 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms | Allocations: 10297)
 
 
+Started GET "/articles/4" for ::1 at 2020-10-06 00:11:35 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 829)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 3697)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-targetv %>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" heref="#">ブログ</a>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ja">
+3:      <head>
+4:        <title>Blog</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:        <%= meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" %>
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <nav class="navbar navbar-default">
+14:          <div class="container-fluid">
+15:            <div class="navbar-header">
+16:              <button type="button" class="navbar-toggle collapsed" data-targetv %>
+17:              <span class="icon-bar"></span>
+18:              <span class="icon-bar"></span>
+19:              <span class="icon-bar"></span>
+20:            </button>
+21:            <a class="navbar-brand" heref="#">ブログ</a>
+22:          </div>
+23:        </div>
+24:        </nav>
+25:        <%= yield %>
+26:      </body>
+27:    </html>
+  
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:11:41 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.1ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1658)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 3887)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-targetv %>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" heref="#">ブログ</a>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ja">
+3:      <head>
+4:        <title>Blog</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:        <%= meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" %>
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <nav class="navbar navbar-default">
+14:          <div class="container-fluid">
+15:            <div class="navbar-header">
+16:              <button type="button" class="navbar-toggle collapsed" data-targetv %>
+17:              <span class="icon-bar"></span>
+18:              <span class="icon-bar"></span>
+19:              <span class="icon-bar"></span>
+20:            </button>
+21:            <a class="navbar-brand" heref="#">ブログ</a>
+22:          </div>
+23:        </div>
+24:        </nav>
+25:        <%= yield %>
+26:      </body>
+27:    </html>
+  
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:14:08 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.7ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 11632)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-06 00:14:12 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 10004)
+
+
+Started GET "/articles/" for ::1 at 2020-10-06 00:14:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2549)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 11225)
+
+
+Started GET "/articles/" for ::1 at 2020-10-06 00:14:36 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2514)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 11966)
+
+
+Started GET "/" for ::1 at 2020-10-06 00:14:38 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2271)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 10777)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-06 00:14:39 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 10007)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:14:43 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 8.3ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1657)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 10826)
+
+
+Started GET "/articles/4" for ::1 at 2020-10-06 00:15:55 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms | Allocations: 9698)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:15:57 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 10224)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:17:29 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.5ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1663)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.1ms | Allocations: 11634)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:18:34 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.4ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1657)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 449ms (Views: 446.9ms | ActiveRecord: 0.1ms | Allocations: 101656)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:19:17 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 556)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 422ms (Views: 413.8ms | ActiveRecord: 0.1ms | Allocations: 101175)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:19:42 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 390ms (Views: 388.9ms | ActiveRecord: 0.1ms | Allocations: 101503)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:20:10 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 402ms (Views: 400.8ms | ActiveRecord: 0.1ms | Allocations: 99861)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:20:46 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 397ms (Views: 395.8ms | ActiveRecord: 0.1ms | Allocations: 100239)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:21:02 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 404ms (Views: 403.0ms | ActiveRecord: 0.1ms | Allocations: 100660)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:22:27 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 415ms (Views: 414.2ms | ActiveRecord: 0.1ms | Allocations: 100701)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:22:30 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 10153)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:23:34 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 395ms (Views: 393.6ms | ActiveRecord: 0.1ms | Allocations: 100268)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:25:38 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.2ms | Allocations: 759)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1666)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 402ms (Views: 399.9ms | ActiveRecord: 0.1ms | Allocations: 101655)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-10-06 00:26:36 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `find_post'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | Allocations: 556)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 400ms (Views: 398.3ms | ActiveRecord: 0.1ms | Allocations: 100310)
+
+
